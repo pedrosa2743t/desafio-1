@@ -1,0 +1,21 @@
+t18 = h = m20 = 0
+while True:
+    print('=-=-=-=-=-=-=-=-=-=-CADASTRO-=-=-=-=-=-=-=-=-=-')
+    i=int(input('qual idade: '))
+    s = ' '
+    while s not in 'MF':
+        s=input('qual sexo [M/F]: ').strip().upper()[0]
+    if i >= 18:
+        t18+=1
+    if s == 'M':
+        h+=1
+    if s == 'F' and i<=20:
+        m20+=1
+    r=' '
+    while r not in 'SN':
+        r=input('Quer continuar [S/N]: ').strip().upper()[0]
+    if r == 'N':
+        break
+print(f'o numero de pessoas maiores de 18 anos e {t18}')
+print(f'o numero de total de homens e igual a {h}')
+print(f'o numero de mulheres menores de 20 anos e igual a {m20}')
